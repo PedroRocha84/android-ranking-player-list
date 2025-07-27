@@ -15,14 +15,14 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        PlayerAdapter adapter = new PlayerAdapter(this, Player.list());
+        PlayerAdapter adapter = new PlayerAdapter(this, Player.getPlayers());
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         Button btnAdd = findViewById(R.id.button_add);
-        btnAdd.setOnClickListener(v->{
+        btnAdd.setOnClickListener(v -> {
             Intent intent = new Intent(this, NewPlayerActivity.class);
             startActivity(intent);
         });
