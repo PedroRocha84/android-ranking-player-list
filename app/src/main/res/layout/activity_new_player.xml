@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Player"
+            android:textSize="24sp"
+            android:textColor="#952D2D"
+            android:layout_marginBottom="24dp" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/editTextAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:inputType="number"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/editTextPoints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Points"
+            android:inputType="number"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/editTextPhotoUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Photo URL"
+            android:inputType="textUri"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:backgroundTint="#952D2D"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>

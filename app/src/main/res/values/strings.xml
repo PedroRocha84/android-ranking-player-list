@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Android Ranking Player List</string>
+    <string name="app_name">android-ranking-player-list</string>
+    <string name="players_ranking">Players Ranking</string>
+    <string name="textview">Add</string>
+    <string name="a_simple_add_button">""</string>
+    <string name="add_new">Add New</string>
+    <string name="add">ADD</string>
+    <string name="text_points">100</string>
+    <string name="text_age">39 Years Old</string>
+    <string name="text_email">myemails@gmail.com</string>
+    <string name="text_name">Pedro Rocha</string>
 </resources>
