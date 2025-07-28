@@ -26,6 +26,7 @@ public class HomeActivity extends AppCompatActivity {
         Button btnAdd = findViewById(R.id.button_add);
         btnAdd.setOnClickListener(v -> {
             Intent intent = new Intent(this, NewPlayerActivity.class);
+
             startActivity(intent);
         });
 

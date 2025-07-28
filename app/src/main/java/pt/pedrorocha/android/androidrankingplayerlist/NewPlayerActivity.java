@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import org.w3c.dom.Text;
 
@@ -44,7 +45,7 @@ public class NewPlayerActivity extends AppCompatActivity {
                 return;
             }
 
-            Player player = new Player(nameTxt, ageValue, emailTxt, pointsValue, photoUrlTxt);
+            Player player = new Player(nameTxt,pointsValue,  emailTxt, ageValue, photoUrlTxt);
             Player.addPlayer(player);
 
             Intent intent = new Intent(this, HomeActivity.class);

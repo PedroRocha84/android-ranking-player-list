@@ -13,10 +13,9 @@ public class Player {
     private int age;
     private String photoUrl;
 
-    private static final String PLAYER_NAME = "player-name";
     private static List<Player> playerList = new ArrayList<>();
 
-    public Player( String name, int points, String email, int age, String photoUrl) {
+    public Player(String name, int points, String email, int age, String photoUrl) {
         this.id = getNextId();
         this.name = name;
         this.points = points;
