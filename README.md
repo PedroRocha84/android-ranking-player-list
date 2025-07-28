@@ -41,6 +41,7 @@ app/
 │ │ │ │ └── player_ranking_card.xml
 │ │ │ └── values/
 │ │ │ │ └── strings.xml
+
 ```
 
 ## 🧠 Learning Goals
