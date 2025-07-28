@@ -61,7 +61,7 @@ app/
 
 1. Clone the repository:
    ```bash
-   git clone git@github.com:PedroRocha84/android-java-profile.git
+   git clone git@github.com:PedroRocha84/android-ranking-player-list.git
 
 2. Open the project in Android Studio
 3. Launch an emulator or connect a device
