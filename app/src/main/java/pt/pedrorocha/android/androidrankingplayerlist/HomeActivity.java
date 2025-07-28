@@ -10,12 +10,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class HomeActivity extends AppCompatActivity {
 
+    public PlayerAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        PlayerAdapter adapter = new PlayerAdapter(this, Player.getPlayers());
+        adapter = new PlayerAdapter(this, Player.getPlayers());
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setAdapter(adapter);

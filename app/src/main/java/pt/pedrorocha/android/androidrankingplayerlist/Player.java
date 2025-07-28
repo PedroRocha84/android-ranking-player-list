@@ -13,6 +13,7 @@ public class Player {
     private int age;
     private String photoUrl;
 
+    private static final String PLAYER_NAME = "player-name";
     private static List<Player> playerList = new ArrayList<>();
 
     public Player( String name, int points, String email, int age, String photoUrl) {
@@ -54,29 +55,27 @@ public class Player {
         return photoUrl;
     }
 
-
     public static List<Player> getPlayers() {
-        return new ArrayList<Player>();
+
+        return playerList;
     }
 
     public static void addPlayer(Player player) {
         playerList.add(player);
     }
 
-//    public static List<Player> list(){
-//
-//        Player P0 = new Player(0, "Alice", 543, "alice0@example.com", 25, "https://randomuser.me/api/portraits/women/1.jpg");
-//        Player P1 = new Player(1, "Bob", 830, "bob1@example.com", 22, "https://randomuser.me/api/portraits/men/2.jpg");
-//        Player P2 = new Player(2, "Charlie", 150, "charlie2@example.com", 30, "https://randomuser.me/api/portraits/men/3.jpg");
-//        Player P3 = new Player(3, "Diana", 710, "diana3@example.com", 27, "https://randomuser.me/api/portraits/women/4.jpg");
+//   public static List<Player> list(){
+//        Player P0 = new Player( "Alice", 543, "alice0@example.com", 25, "https://randomuser.me/api/portraits/women/1.jpg");
+//        Player P1 = new Player("Bob", 830, "bob1@example.com", 22, "https://randomuser.me/api/portraits/men/2.jpg");
+//       Player P2 = new Player("Charlie", 150, "charlie2@example.com", 30, "https://randomuser.me/api/portraits/men/3.jpg");
+//        Player P3 = new Player("Diana", 710, "diana3@example.com", 27, "https://randomuser.me/api/portraits/women/4.jpg");
 //        Player P4 = new Player(4, "Ethan", 420, "ethan4@example.com", 21, "https://randomuser.me/api/portraits/men/5.jpg");
 //        Player P5 = new Player(5, "Fiona", 690, "fiona5@example.com", 24, "https://randomuser.me/api/portraits/women/6.jpg");
 //        Player P6 = new Player(6, "George", 300, "george6@example.com", 28, "https://randomuser.me/api/portraits/men/7.jpg");
 //        Player P7 = new Player(7, "Hannah", 950, "hannah7@example.com", 20, "https://randomuser.me/api/portraits/women/8.jpg");
 //        Player P8 = new Player(8, "Ian", 780, "ian8@example.com", 26, "https://randomuser.me/api/portraits/men/9.jpg");
 //        Player P9 = new Player(9, "Julia", 610, "julia9@example.com", 23, "https://randomuser.me/api/portraits/women/10.jpg");
-//
-//        return new ArrayList<>(Arrays.asList(P0, P1, P2, P3, P4, P5, P6, P7, P8, P9));
-//    }
+//       return new ArrayList<>(Arrays.asList(P0, P1, P2, P3));
+//   }
 }
 

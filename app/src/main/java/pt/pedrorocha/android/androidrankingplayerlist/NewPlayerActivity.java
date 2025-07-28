@@ -45,8 +45,12 @@ public class NewPlayerActivity extends AppCompatActivity {
             }
 
             Player player = new Player(nameTxt, ageValue, emailTxt, pointsValue, photoUrlTxt);
-            Player.addPlayer(player);  // assuming this is a static method in a PlayerManager or singleton
-            finish();  // go back to HomeActivity
+            Player.addPlayer(player);
+
+            Intent intent = new Intent(this, HomeActivity.class);
+            startActivity(intent);
+
+            finish();
         });
 
     }
