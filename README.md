@@ -34,6 +34,8 @@ app/
 │ │ │ └── NewPlayerActivity.class
 │ │ │ └── Player.class
 │ │ │ └── PlayerAdapter.class
+│ │ │ └── PlayerDbSchema.class
+│ │ │ └── PlayerService.class
 │ │ ├── res/
 │ │ │ ├── layout/
 │ │ │ │ └── activity_main.xml
@@ -58,7 +60,6 @@ app/
 <img width="203" height="425" alt="image" src="https://github.com/user-attachments/assets/2d9d8fe3-69cb-452a-ac8b-d1c5346661fa" />
 <img width="203" height="425" alt="image" src="https://github.com/user-attachments/assets/214736a7-8826-4581-86f6-f6043b72efab" />
 
-
 ## 🔧 How to Run
 
 1. Clone the repository:
@@ -68,3 +69,6 @@ app/
 2. Open the project in Android Studio
 3. Launch an emulator or connect a device
 4. Click Run (Shift + F10)
+
+## 🔧 Next steps
+- add the remain operations from CRUD
