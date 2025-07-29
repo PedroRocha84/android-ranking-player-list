@@ -2,9 +2,10 @@ package pt.pedrorocha.android.androidrankingplayerlist;
 
 import android.provider.BaseColumns;
 
-public class PlayerDbSchema {
+public final class PlayerDbSchema {
 
-    private PlayerDbSchema(){}
+    private PlayerDbSchema()
+    {}
 
     public static class PlayerTable implements BaseColumns{
 
@@ -14,6 +15,7 @@ public class PlayerDbSchema {
         public static final String COLUMN_AGE = "age";
         public static final String COLUMN_POINTS = "points";
         public static final String COLUMN_PHOTO_URL = "photoUrl";
+
     }
 }
 

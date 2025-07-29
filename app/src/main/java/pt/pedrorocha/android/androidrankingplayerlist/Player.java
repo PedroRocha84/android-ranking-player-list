@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Player {
 
-    private int id;
+    private long id;
     private String name;
     private int points;
     private String email;
@@ -30,7 +30,7 @@ public class Player {
         return playerList.size() + 1;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -54,13 +54,17 @@ public class Player {
         return photoUrl;
     }
 
-    public static List<Player> getPlayers() {
+//    public static List<Player> getPlayers() {
+//
+//        return playerList;
+//    }
+//
+//    public static void addPlayer(Player player) {
+//        playerList.add(player);
+//    }
 
-        return playerList;
-    }
-
-    public static void addPlayer(Player player) {
-        playerList.add(player);
+    public void setId(long id){
+        this.id = id;
     }
 
 //   public static List<Player> list(){

@@ -1,26 +1,22 @@
 package pt.pedrorocha.android.androidrankingplayerlist;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.recyclerview.widget.RecyclerView;
-
-import org.w3c.dom.Text;
 
 public class NewPlayerActivity extends AppCompatActivity {
+
+    public PlayerService playerService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_player);
+
+        playerService = new PlayerService(new PlayerDbHelper(this));
 
         Button btnSubmit = findViewById(R.id.buttonSubmit);
         TextView name = findViewById(R.id.editTextName);
@@ -46,11 +42,8 @@ public class NewPlayerActivity extends AppCompatActivity {
             }
 
             Player player = new Player(nameTxt,pointsValue,  emailTxt, ageValue, photoUrlTxt);
-            Player.addPlayer(player);
 
-            Intent intent = new Intent(this, HomeActivity.class);
-            startActivity(intent);
-
+            playerService.insert(player);
             finish();
         });
 

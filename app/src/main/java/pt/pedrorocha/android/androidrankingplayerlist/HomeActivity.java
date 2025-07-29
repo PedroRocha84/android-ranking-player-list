@@ -12,12 +12,18 @@ public class HomeActivity extends AppCompatActivity {
 
     public PlayerAdapter adapter;
 
+    public PlayerService playerService;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        adapter = new PlayerAdapter(this, Player.getPlayers());
+        PlayerDbHelper dbHelper = new PlayerDbHelper(this); //CREATE DB
+        playerService = new PlayerService(dbHelper);
+
+        adapter = new PlayerAdapter(this, playerService.list());
+        playerService.addAdapter(adapter);
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setAdapter(adapter);
@@ -26,9 +32,9 @@ public class HomeActivity extends AppCompatActivity {
         Button btnAdd = findViewById(R.id.button_add);
         btnAdd.setOnClickListener(v -> {
             Intent intent = new Intent(this, NewPlayerActivity.class);
-
             startActivity(intent);
         });
 
     }
+
 }

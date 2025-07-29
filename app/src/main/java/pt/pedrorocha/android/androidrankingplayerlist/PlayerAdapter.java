@@ -1,6 +1,7 @@
 package pt.pedrorocha.android.androidrankingplayerlist;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,7 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.ViewHolder
         holder.emailView.setText(playersList.get(position).getEmail());
         holder.ageView.setText(String.valueOf(playersList.get(position).getAge() + " years old"));
         holder.pointsView.setText(String.valueOf(playersList.get(position).getPoints() + " points"));
+        Log.d("holder Position", "onBindViewHolder: " + position);
         Glide.with(context).load(playersList.get(position).getPhotoUrl()).into(holder.avatarView);
     }
 
@@ -44,6 +46,7 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.ViewHolder
     public int getItemCount() {
         return playersList.size();
     }
+
     //Implementation View holder ( our card holder)
     public class ViewHolder extends RecyclerView.ViewHolder {
 

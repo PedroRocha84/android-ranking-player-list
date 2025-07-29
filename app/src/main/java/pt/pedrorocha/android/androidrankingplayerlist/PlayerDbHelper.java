@@ -16,16 +16,15 @@ public class PlayerDbHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+    public void onCreate(SQLiteDatabase db) {
         String query = "CREATE TABLE " +
                 PlayerDbSchema.PlayerTable.TABLE_NAME + " ( " +
-                PlayerDbSchema.PlayerTable._ID + "INTEGER PRIMARY KEY, " +
+                PlayerDbSchema.PlayerTable._ID + " INTEGER PRIMARY KEY, " +
                 PlayerDbSchema.PlayerTable.COLUMN_NAME + " TEXT, " +
                 PlayerDbSchema.PlayerTable.COLUMN_EMAIL + " TEXT, " +
-                PlayerDbSchema.PlayerTable.COLUMN_AGE + " TEXT, " +
-                PlayerDbSchema.PlayerTable.COLUMN_POINTS + " TEXT, " +
+                PlayerDbSchema.PlayerTable.COLUMN_AGE + " INTEGER, " +
+                PlayerDbSchema.PlayerTable.COLUMN_POINTS + " INTEGER, " +
                 PlayerDbSchema.PlayerTable.COLUMN_PHOTO_URL + " TEXT)";
-
         db.execSQL(query);
     }
 
@@ -33,5 +32,15 @@ public class PlayerDbHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + PlayerDbSchema.PlayerTable.TABLE_NAME);
         onCreate(db);
+    }
+
+    public SQLiteDatabase getDb() {
+        // lazy instantiation
+        if (db != null) {
+            return db;
+        }
+
+        db = getWritableDatabase(); // this is a long running task
+        return db;
     }
 }
