@@ -10,9 +10,6 @@ An simple and funny way to consolidate the knowledge about managing activities a
 - Two simple activities with state persistence
 - Designed a new layout for user detail card
 - Data input and data transfer between activities
-- Open a browser via an ImageView that links to my LinkedIn profile
-- Handle intents in the AndroidManifest to support URL navigation
-- Log app events using LogCat for debugging
 
 ## 🛠️ Built With
 
