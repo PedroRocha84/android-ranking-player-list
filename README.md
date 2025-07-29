@@ -55,6 +55,8 @@ app/
 - Toast feedback message to debug purposes and activity lifecycle tracking and learning.
 
 ## 📱 Screenshots
+<img width="203" height="425" alt="image" src="https://github.com/user-attachments/assets/2d9d8fe3-69cb-452a-ac8b-d1c5346661fa" />
+<img width="203" height="425" alt="image" src="https://github.com/user-attachments/assets/214736a7-8826-4581-86f6-f6043b72efab" />
 
 
 ## 🔧 How to Run
